@@ -14,9 +14,8 @@ Summary: A collection of functions helpful in learning the basic tenets of Bayes
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/r-learnbayes-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/r-learnbayes-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/r-learnbayes-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/r-learnbayes-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/r-learnbayes-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/r-learnbayes-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/r-learnbayes-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/r-learnbayes-feedstock)
 
 Current release info
 ====================

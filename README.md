@@ -1,11 +1,11 @@
-About r-learnbayes
-==================
+About r-learnbayes-feedstock
+============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-learnbayes-feedstock/blob/main/LICENSE.txt)
 
 Home: https://CRAN.R-project.org/package=LearnBayes
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-learnbayes-feedstock/blob/main/LICENSE.txt)
 
 Summary: A collection of functions helpful in learning the basic tenets of Bayesian statistical inference.  It contains functions for summarizing basic one and two parameter posterior distributions and predictive distributions.  It contains MCMC algorithms for summarizing posterior distributions defined by the user.  It also contains functions for regression models, hierarchical models, Bayesian tests, and illustrations of Gibbs sampling.
 

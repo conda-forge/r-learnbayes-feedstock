@@ -1,4 +1,4 @@
-{% set version = '2.15.1' %}
+{% set version = "2.15.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,22 +9,33 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/LearnBayes_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/LearnBayes/LearnBayes_{{ version }}.tar.gz
-  sha256: 9b110858456523ca0b2a63f22013c4e1fbda6674b9d84dc1f4de8bffc5260532
+  sha256: 7ae3458c64b426b7a753bf0613dc1e6eebccddcadbea9e86687ab2312861d192
 
 build:
-  number: 1006
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-coda
+    - r-lattice
+    - r-survival
   run:
     - r-base
+    - r-coda
+    - r-lattice
+    - r-survival
 
 test:
   commands:
@@ -34,11 +45,8 @@ test:
 about:
   home: https://CRAN.R-project.org/package=LearnBayes
   license: GPL-2.0-or-later
-  summary: A collection of functions helpful in learning the basic tenets of Bayesian statistical
-    inference.  It contains functions for summarizing basic one and two parameter posterior
-    distributions and predictive distributions.  It contains MCMC algorithms for summarizing
-    posterior distributions defined by the user.  It also contains functions for regression
-    models, hierarchical models, Bayesian tests, and illustrations of Gibbs sampling.
+  summary: A collection of functions helpful in learning the basic tenets of Bayesian statistical inference.  It contains functions for summarizing basic one and two parameter posterior distributions and predictive distributions.  It contains MCMC algorithms for summarizing posterior distributions defined by the user.  
+    It also contains functions for regression models, hierarchical models, Bayesian tests, and illustrations of Gibbs sampling.
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
